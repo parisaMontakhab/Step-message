@@ -10,3 +10,7 @@
 .custom-btn{
     @apply w-32  bg-indigo-600 rounded-full text-xl font-semibold text-white pt-4
 }
+
+.not-active {
+    @apply bg-slate-300 w-16 h-16 rounded-full text-slate-400 pt-4 font-bold text-lg
+}
