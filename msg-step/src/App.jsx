@@ -10,6 +10,7 @@ function App() {
   const [isOpen,setIsOpen] = useState(true);
   
   function handlePrevious (){
+    //allways use the calback function for updating setState//
    if(step >1) setStep((s)=> s-1)
   }
 function handleNext (){
