@@ -80,9 +80,11 @@ function Step() {
 }
 
 function ChallengeOne() {
-  const day = new Date().toDateString();
   const [step, setStep] = useState(0);
   const [count, setCount] = useState(0);
+
+  const day = new Date("june 21 2027");
+  day.setDate(day.getDate() + count);
 
   function hanldlePlusStep() {
     setStep((s) => s + 1);
@@ -133,7 +135,16 @@ function ChallengeOne() {
           +
         </button>
       </div>
-      <div>{count} days from today : {day}</div>
+      <div>
+        <span>
+          {count === 0
+            ? "Today is"
+            : count > 0
+            ? `${count} days from today`
+            : `${count} days ago was`}{" "}
+        </span>
+        {day.toDateString()}{" "}
+      </div>
     </div>
   );
 }
