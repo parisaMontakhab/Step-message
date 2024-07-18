@@ -1,6 +1,8 @@
 
 export default function ChallengeOne (){
-    const dateString = new Date().toLocaleDateString();
+    const dateString = new Date().toLocaleDateString('en-US',{year: 'numeric',
+        month: 'long',
+        day: 'numeric'});
     return(
         <div className="text-center mt-10">
             <div className="grid grid-cols-3 w-48 mx-auto mb-5">
