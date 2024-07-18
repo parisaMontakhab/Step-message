@@ -84,13 +84,17 @@ return (
 
   function ChallengeOne (){
  const day = new Date().toDateString();
+ const[step,setStep] = useState(0);
+ const [count,setCount] = useState(0);
  
+
+
 
   return(
       <div className="text-center mt-10">
           <div className="grid grid-cols-3 w-48 mx-auto mb-5">
               <button className="bg-slate-300 rounded-full font-bold text-2xl ">-</button>
-              <p>step :0 </p>
+              <p>step :{step} </p>
               <button className="bg-slate-300 rounded-full font-bold text-2xl "> +</button>
           </div>
           <div className="grid grid-cols-3 w-48 mx-auto mb-5">
