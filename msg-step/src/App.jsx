@@ -7,7 +7,9 @@ const message =[
 ]
 
 function App() {
+
   //extract Step component for showing this : each component has own state and they work seprat//
+  
   return(
     <div>
     
@@ -81,9 +83,9 @@ return (
 }
 
   function ChallengeOne (){
-  const dateString = new Date().toLocaleDateString('en-US',{year: 'numeric',
-      month: 'long',
-      day: 'numeric'});
+ const day = new Date().toDateString();
+ 
+
   return(
       <div className="text-center mt-10">
           <div className="grid grid-cols-3 w-48 mx-auto mb-5">
@@ -96,7 +98,7 @@ return (
               <p>count :0 </p>
               <button className="bg-slate-300 rounded-full font-bold text-2xl "> +</button>
           </div>
-          <div>today is : {dateString}</div>
+          <div>today is {day}</div>
       </div>
   )
 }
