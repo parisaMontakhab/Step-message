@@ -16,9 +16,9 @@
 }
 
 .close-btn {
-    @apply mx-auto mt-5 w-20 text-center rounded-full p-2 bg-indigo-800 text-slate-50 shadow-md
+    @apply mx-auto mt-28 w-20 text-center rounded-full p-2 bg-indigo-800 text-slate-50 shadow-md
 }
 
 .step-father{
-    @apply text-center w-2/4 mx-auto bg-slate-200 rounded-2xl mt-28 shadow-md
+    @apply text-center w-2/4 mx-auto bg-slate-200 rounded-2xl mt-28 shadow-md mb-20
 }
