@@ -119,14 +119,15 @@ function ChallengeOne() {
           +
         </button>
       </div>
-      <div className="grid grid-cols-3 w-48 mx-auto mb-5">
+      <div className="grid grid-cols-3 w-48 mx-auto mb-5 ">
         <button
           onClick={handleMinesCount}
           className="bg-slate-300 rounded-full font-bold text-2xl "
         >
           -
         </button>
-        <p>count :{count}</p>
+        <input value={count} onChange={(e)=> setCount(e.target.value)}
+        className="w-16 bg-slate-300 rounded-2xl text-slate-900 text-center" placeholder="0"/>
         <button
           onClick={handlePlusCount}
           className="bg-slate-300 rounded-full font-bold text-2xl "
