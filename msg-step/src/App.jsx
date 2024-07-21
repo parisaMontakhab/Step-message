@@ -108,14 +108,15 @@ function ChallengeOne() {
 
   return (
     <div className="text-center mt-10">
-      <div className="grid grid-cols-3 w-48 mx-auto mb-5">
+      <div className="grid grid-cols-4 w-56 mx-auto mb-5">
         <button
           onClick={handleMinesStep}
           className="bg-slate-300 rounded-full font-bold text-2xl "
         >
           -
         </button>
-        <p>step :{step} </p>
+        <input type="range" id={step} name="step" min="0" max="10"/>
+        <lable for="step">{step}</lable>
         <button
           onClick={hanldlePlusStep}
           className="bg-slate-300 rounded-full font-bold text-2xl "
