@@ -108,22 +108,25 @@ function ChallengeOne() {
 
   return (
     <div className="text-center mt-10">
-      <div className="grid grid-cols-4 w-56 mx-auto mb-5">
-        <button
+      <div className="grid grid-cols-3 w-72 mx-auto mb-5  ">
+        {/* <button
           onClick={handleMinesStep}
           className="bg-slate-300 rounded-full font-bold text-2xl "
         >
           -
-        </button>
-        <input type="range" id={step} name="step" min="0" max="10"/>
-        <lable for="step">{step}</lable>
-        <button
+        </button> */}
+       
+        <input value={step} onChange={(e)=>setStep(Number(e.target.value))} type="range"   min="0" max="10"/>
+        <span> step: {step}</span>
+      
+       
+        {/* <button
           onClick={hanldlePlusStep}
           className="bg-slate-300 rounded-full font-bold text-2xl "
         >
           {" "}
           +
-        </button>
+        </button> */}
       </div>
       <div className="grid grid-cols-3 w-48 mx-auto mb-5 ">
         <button
@@ -132,7 +135,7 @@ function ChallengeOne() {
         >
           -
         </button>
-        <input value={count} onChange={(e)=> setCount(e.target.value)}
+        <input value={count} onChange={(e)=> setCount(Number(e.target.value))}
         className="w-16 bg-slate-300 rounded-2xl text-slate-900 text-center" />
         <button
           onClick={handlePlusCount}
