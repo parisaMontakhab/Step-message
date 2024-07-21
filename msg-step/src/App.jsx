@@ -101,6 +101,11 @@ function ChallengeOne() {
     setCount((c) => c - step);
   }
 
+  function handleReset(){
+    setCount(0);
+    setStep(0)
+  }
+
   return (
     <div className="text-center mt-10">
       <div className="grid grid-cols-3 w-48 mx-auto mb-5">
@@ -127,7 +132,7 @@ function ChallengeOne() {
           -
         </button>
         <input value={count} onChange={(e)=> setCount(e.target.value)}
-        className="w-16 bg-slate-300 rounded-2xl text-slate-900 text-center" placeholder="0"/>
+        className="w-16 bg-slate-300 rounded-2xl text-slate-900 text-center" />
         <button
           onClick={handlePlusCount}
           className="bg-slate-300 rounded-full font-bold text-2xl "
@@ -145,6 +150,9 @@ function ChallengeOne() {
             : `${Math.abs(count)} days ago was`}{" "}
         </span>
         {day.toDateString()}{" "}
+      </div>
+      <div className="mt-5 w-20 bg-slate-300 mx-auto rounded-xl ">
+        <button onClick={handleReset}>Reset</button>
       </div>
     </div>
   );
