@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Step from "./components/Challenge1";
+import ChallengeTwo from "./components/Challenge2";
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <Step/>
+     <ChallengeTwo/>
     </div>
   );
 }
