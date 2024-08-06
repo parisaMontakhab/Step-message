@@ -5,11 +5,11 @@ export default function ChallengeTwo() {
   return (
     <div className="text-center">
       <div className="mb-4 mt-2">
-        <h2>How much was the bill?</h2>
+        <label>How much was the bill?</label>
         <input
           type="text"
           placeholder="0"
-          className="bg-slate-200 p-2 text-center rounded-md"
+          className="bg-slate-200 p-2 text-center rounded-md mx-8"
           value={bill}
           onChange={(e) => setBill(e.target.value)}
         />
