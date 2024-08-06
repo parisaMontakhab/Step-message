@@ -1,20 +1,12 @@
 import { useState } from "react";
 
 export default function ChallengeTwo() {
-  const [bill, setBill] = useState(0);
+  const [bill, setBill] = useState('');
+
+
   return (
     <div className="text-center">
-      <div className="mb-4 mt-2">
-        <label>How much was the bill?</label>
-        <input
-          type="text"
-          placeholder="0"
-          className="bg-slate-200 p-2 text-center rounded-md mx-8"
-          value={bill}
-          onChange={(e) => setBill(e.target.value)}
-        />
-      </div>
-
+     <BillInput bill={bill} setBill={setBill}/>
       <div className="mb-4 mt-2">
         <label>How did you like the services?</label>
         <select className="bg-slate-200 p-2 text-center rounded-md mx-8">
@@ -49,4 +41,21 @@ export default function ChallengeTwo() {
       )}
     </div>
   );
+}
+
+
+function BillInput({setBill,bill}){
+  return(
+    <div className="mb-4 mt-2">
+    <label>How much was the bill?</label>
+    <input
+      type="text"
+      placeholder="Bill value"
+      className="bg-slate-200 p-2 text-center rounded-md mx-8"
+      value={bill}
+      onChange={(e) => setBill(e.target.value)}
+    />
+  </div>
+
+  )
 }
