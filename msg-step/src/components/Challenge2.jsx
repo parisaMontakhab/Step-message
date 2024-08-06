@@ -5,6 +5,15 @@ export default function ChallengeTwo() {
   const [tipOne, setTipOne] = useState(0);
   const [tipTwo, setTipTwo] = useState(0);
 
+ const tip = bill * ((tipOne + tipTwo)/2/100);
+ const total = bill + tip ;
+
+ function handleReset (){
+  setBill(0);
+  setTipOne(0);
+  setTipTwo(0);
+ }
+
 
   return (
     <div className="text-center">
@@ -20,9 +29,9 @@ export default function ChallengeTwo() {
       {bill > 0 ? (
         <div className="mt-8">
           <p className="font-bold">
-            you pay ${bill} (${bill} + $0 tip)
+            you pay ${total} (${bill} + ${tip})
           </p>
-          <button className="bg-slate-200 p-2 rounded-lg mt-4" onClick={()=>setBill(0)}>Reset</button>
+          <button className="bg-slate-200 p-2 rounded-lg mt-4" onClick={handleReset}>Reset</button>
         </div>
       ) : (
         ""
@@ -41,7 +50,7 @@ function BillInput({setBill,bill}){
       placeholder="Bill value"
       className="bg-slate-200 p-2 text-center rounded-md mx-8"
       value={bill}
-      onChange={(e) => setBill(e.target.value)}
+      onChange={(e) => setBill(Number(e.target.value))}
     />
   </div>
 
@@ -52,7 +61,7 @@ function PercentageTip ({children,tip,setTip}){
   return(
     <div className="mb-4 mt-2">
     <label>{children}</label>
-    <select className="bg-slate-200 p-2 text-center rounded-md mx-8" value={tip} onChange={(e)=>setTip(e.target.value)}>
+    <select className="bg-slate-200 p-2 text-center rounded-md mx-8" value={tip} onChange={(e)=>setTip(Number(e.target.value))}>
         <option value='0'>Dissatisfied (0%)</option>
         <option value='5'>It was okay (5%)</option>
         <option value='10'>It was good (10%)</option>
