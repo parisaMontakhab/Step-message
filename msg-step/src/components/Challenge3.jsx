@@ -1,22 +1,25 @@
 import { useState } from "react";
 
 export default function ChallengeTree() {
-    const [show,setShow] = useState(false);
+    const [showOne,setShowOne] = useState(false);
 
 
   return (
     <div>
       <TextCard>
-        <p className="bg-red-200 text-nowrap overflow-hidden truncate  p-2 ">
+        <p className={!showOne ? 'bg-red-200  p-2  text-nowrap overflow-hidden truncate' : 'bg-red-200  p-2'}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           consequuntur eligendi modi fuga aut eius doloremque unde fugit odio
           autem numquam provident possimus, repudiandae vero suscipit? Assumenda
           tempore commodi fugiat?
-          <p className="text-red-700 font-bold cursor-pointer" onClick={()=>setShow(!show)}>
-            {show ? 'Hide them' : 'Show more'}
+          <p className="text-red-700 font-bold cursor-pointer" onClick={()=>setShowOne(!showOne)}>
+            {showOne ? 'Hide them' : 'Show more'}
           </p>
         </p>
       </TextCard>
+
+
+     
       
      
     </div>
