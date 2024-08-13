@@ -23,3 +23,18 @@
     @apply text-center w-2/4 mx-auto bg-slate-200 rounded-2xl mt-28 shadow-md mb-20
 }
 
+.box {
+    @apply bg-red-300 w-3/5 p-4 mx-auto mt-10
+}
+
+.text-expend{
+    @apply bg-red-200  p-2  text-nowrap overflow-hidden truncate
+}
+
+.text-notexpend {
+    @apply bg-red-200  p-2
+}
+
+.btn {
+    @apply text-red-700 font-bold cursor-pointer
+}
