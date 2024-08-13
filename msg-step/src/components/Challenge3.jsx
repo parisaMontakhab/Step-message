@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 export default function ChallengeTree() {
+    const [show,setShow] = useState(false);
+
+
   return (
     <div>
       <TextCard>
@@ -7,15 +12,13 @@ export default function ChallengeTree() {
           consequuntur eligendi modi fuga aut eius doloremque unde fugit odio
           autem numquam provident possimus, repudiandae vero suscipit? Assumenda
           tempore commodi fugiat?
-          <p className="text-red-700">show more</p>
+          <p className="text-red-700 font-bold cursor-pointer" onClick={()=>setShow(!show)}>
+            {show ? 'Hide them' : 'Show more'}
+          </p>
         </p>
       </TextCard>
       
-      <TextCard>
-        <p className="bg-red-200 text-nowrap overflow-hidden truncate  p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur eligendi ipsum odio deleniti doloremque ab ullam aliquam asperiores laborum! Error, tenetur quos dolore excepturi dicta molestiae possimus unde repellendus
-            <p className="text-red-700">hide them</p>
-        </p>
-      </TextCard>
+     
     </div>
   );
 }
